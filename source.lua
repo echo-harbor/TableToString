@@ -1,4 +1,4 @@
-return function(value, indent)
+local function serialize(value, indent)
     indent = indent or 0
     local t = typeof(value)
 
@@ -92,3 +92,5 @@ return function(value, indent)
         return tostring(value)
     end
 end
+
+return serialize
